@@ -1,19 +1,36 @@
+@font-face {
+    font-family: 'quantumregular';
+    src: url('/font/quantum-webfont.woff2') format('woff2'),
+         url('/font/quantum-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 
-.dicebackground{
-    background-color: #efedf2;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23131315' fill-opacity='0.19'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
+.dicebackground{
+    background-image: url(/IMG/backgroundfuturist.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.backgroundgame{
+    background-image: url(/IMG/1471.jpeg);
+    background-position:bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    box-shadow: 10px 10px 30px rgba(155,0,185,1);
+}
 header{
     margin: 1.5rem;
     text-decoration: none;
-    font-family: 'Lato', sans-serif ;
-}
+    font-family: 'quantumregular';}
 h1{
-    font-size: clamp(28px, 12vw, 10rem);
+    font-size: clamp(25px, 10vw, 7rem);
 }
 
 h2{
+    font-family: 'quantumregular';
     font-size: clamp(16px, 10vw, 4rem);
 }
 .securescore{
@@ -21,14 +38,19 @@ h2{
     color: green;
 
 }
-#totalScore{
+.btnrolldice{
+    background: linear-gradient(140deg, rgba(254,217,59,1) 0%, rgba(255,109,53,1) 70%, rgba(255,58,86,1) 100%);
+}
+.btnsecuriser{
+    background: linear-gradient(180deg, rgba(0,23,47,1) 0%, rgba(155,0,185,1) 100%);
+}
+.totalscore{
     font-size: clamp(18px, 10vw, 5rem);
     color: red;
 
 }
-.btnsecuriser{
-    background-color: orange;
-    border-color: orange;
+.colorscore{
+    font-family: 'lato', sans-serif;
 }
 .totalScoreUnText{
     font-size: clamp(20px, 12vw, 1rem);
@@ -50,4 +72,20 @@ footer{
 label{
     font-family: 'Lato', sans-serif;
     font-size: 1.2rem;
+}
+.backgroundmodalnewparty{
+    background-image: url(/IMG/backgroundmodalnewparty.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.fonttitlemodal{
+    font-size: 2rem;
+    font-family: 'quantumregular';
+}
+.fontmodal{
+    font-size: clamp(25px, 10vw, 7rem);
+}
+.shadowmodal{
+    box-shadow: 10px 10px 30px rgba(155,0,185,1);
 }
