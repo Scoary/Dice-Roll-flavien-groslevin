@@ -44,7 +44,7 @@
     <div class="d-flex backgroundgame container">
     <section class="row justify-content-center container m-auto position-relative">
     <div>
-      <img class="imgdice shadow-lg position-absolute top-50 start-50 translate-middle" src="/IMG/dice-6.png"
+      <img class="imgdice shadowmodal position-absolute top-50 start-50 translate-middle" src="/IMG/dice-6.png"
         style="width: 100px;" alt="dice">
     </div>
     <div class=" pb-lg-0 rounded-start bg-white col-12 col-lg-5 text-center bg-transparent">
@@ -56,7 +56,7 @@
           </div>
           
           <div class="col d-flex flex-column align-items-center">
-            <h4 class="col-4 text-white colorscore">Score total</h3>
+            <h4 class="col-4 text-white colorscore">Score total</h4>
             <div class="totalscore text-center mb-4" id="totalScore-0" style="display: block;">0</div>
             <span class="text-white" id="totalpointplayer1"></span>
             </div>
@@ -71,11 +71,12 @@
             
           </div>
           <div class="col d-flex flex-column align-items-center">
-            <h4 class="col-4 text-white colorscore">Score total</h3>
+            <h4 class="col-4 text-white colorscore">Score total</h4>
             <div class="totalscore text-center mb-4" id="totalScore-1" style="display: block;">0</div>
             <span class="text-white" id="totalpointplayer2"></span>
           </div>
         </div>
+      </div>
       </section>
     </div>
         <section class="row justify-content-center container m-auto">
@@ -83,7 +84,6 @@
           le Dés</a>
         <button class="btnsecuriser btn btn-lg text-white justify-content-center col-lg-6"
           style="display: block;">Sécuriser</button>
-      </div>
     </section>
   </main>
   <footer>
@@ -100,15 +100,15 @@
         </div>
         <div class="modal-body ">
           <div class="mb-3 col-6 m-auto">
-            <label for="name1" class="form-label text-success">Joueur 1 :</label>
+            <label for="name0" class="form-label text-success">Joueur 1 :</label>
             <input type="text" class="form-control" id="name0" placeholder="Entrez votre prénom">
           </div>
           <div class="mb-3 col-6 m-auto">
-            <label for="name2" class="form-label text-primary">Joueur 2 :</label>
+            <label for="name1" class="form-label text-primary">Joueur 2 :</label>
             <input type="text" class="form-control" id="name1" placeholder="Entrez votre prénom">
           </div>
           <div class="text-center mb-3 flex-column">
-            <label for="totalPoint" class="col d-flex justify-content-center">Choisissez le score à atteindre (10-100)
+            <label for="inputtotalpoint" class="col d-flex justify-content-center">Choisissez le score à atteindre (10-100)
               :</label>
             <input class="col-3 mt-2  rounded-3 text-center" type="number" id="inputtotalpoint" min="10" max="100"
               step="10" value="100">
