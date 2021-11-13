@@ -30,13 +30,14 @@ $('.btnsecuriser').on('click', () => {
         document.querySelector('#score-' + activePlayer).textContent = 0;
     
         if (scores[activePlayer] >= totalPoint) {
-            document.querySelector('#name-' + activePlayer).textContent = 'Gagné 🥳';
+            document.querySelector('#name-' + activePlayer).innerHTML +=  ' a gagné 🥳';
             document.querySelector('img').style.display = 'none';
+            document.querySelector('#name-' + activePlayer ).classList.remove('active');
             gamePlaying = false;
             $('.btnrolldice').addClass('disabled');
             $('.btnsecuriser').addClass('disabled');
             
-            let duration = 5 * 1000;
+            let duration = 7 * 1000;
             let animationEnd = Date.now() + duration;
             let defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
 
@@ -52,7 +53,6 @@ $('.btnsecuriser').on('click', () => {
             }
 
             let particleCount = 50 * (timeLeft / duration);
-            // since particles fall down, start a bit higher than random
             confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 } }));
             confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 } }));
             }, 250);
@@ -66,19 +66,32 @@ function nextPlayer() {
     activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
     roundScore = 0;
 
+    document.querySelector('#name-0').classList.toggle('active');
+    document.querySelector('#name-1').classList.toggle('active');
     document.getElementById('score-' + activePlayer).textContent = '0';
 }
 
 document.querySelector('.btn-new').addEventListener('click', init);
 
 function namePlayer1 () {
-    let inputPlayer1 = document.querySelector('#name0').value;
-    document.querySelector('#name-0').textContent = inputPlayer1;
+   
+    if (document.querySelector('#name0').value === ''){
+        document.querySelector('#name-0').textContent = 'Joueur 1'
+    }
+    else {
+        let inputPlayer1 = document.querySelector('#name0').value;
+        document.querySelector('#name-0').textContent = inputPlayer1;
+    }
 };
-
 function namePlayer2 () {
+
+    if (document.querySelector('#name1').value === ''){
+        document.querySelector('#name-1').textContent = 'Joueur 2'
+    }
+    else{
     let inputPlayer2 = document.querySelector('#name1').value;
     document.querySelector('#name-1').textContent =inputPlayer2;
+    }
 };
 function scoreTotal () {
     let inputTotalPoint = document.querySelector('#inputtotalpoint').value;
@@ -87,7 +100,6 @@ function scoreTotal () {
     totalPoint = inputTotalPoint;
 
 };
-
 function init() {
     scores = [0, 0];
     activePlayer = 0;
@@ -97,6 +109,7 @@ function init() {
     document.querySelector('img').style.display = 'block';
     document.querySelector('#totalScore-0').textContent = '0';
     document.querySelector('#totalScore-1').textContent = '0';
+    document.querySelector('#name-0').classList.add('active');
 
     $('.btnrolldice').removeClass('disabled');
     $('.btnsecuriser').removeClass('disabled'); 

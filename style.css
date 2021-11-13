@@ -6,7 +6,6 @@
     font-style: normal;
 
 }
-
 .dicebackground{
     background-image: url(/IMG/backgroundfuturist.png);
     background-position: center;
@@ -28,10 +27,10 @@ header{
 h1{
     font-size: clamp(25px, 10vw, 7rem);
 }
-
 h2{
-    font-family: 'quantumregular';
+    font-family: 'lato', sans-serif;
     font-size: clamp(16px, 10vw, 4rem);
+    text-transform: uppercase;
 }
 .securescore{
     font-size: clamp(18px, 10vw, 5rem);
@@ -56,7 +55,6 @@ h2{
     font-size: clamp(20px, 12vw, 1rem);
 
 }
-
 .playerun{
     margin-bottom: 6rem;
 }
@@ -68,7 +66,6 @@ footer{
     color: rgb(0, 0, 0);
     text-align: center;
 }
-
 label{
     font-family: 'Lato', sans-serif;
     font-size: 1.2rem;
@@ -88,4 +85,9 @@ label{
 }
 .shadowmodal{
     box-shadow: 10px 10px 30px rgba(155,0,185,1);
+}
+.active::after {
+    content: "\2022";
+    font-size: clamp(16px, 10vw, 4rem);
+    color: #ce0202;    
 }
